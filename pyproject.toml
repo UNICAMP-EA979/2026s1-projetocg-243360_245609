@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.2", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urenderer"
+description = "Micro-renderer for learning about computer graphics"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.10"
+dynamic = ["version"]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "opencv-python",
+    "PyOpenGL",
+    "PyOpenGL_accelerate",
+    "glfw",
+    "icosphere",
+    "pygltflib",
+    "flip-evaluator",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "" = "src" }
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.fs", "*.vs", "*.glsl"]
