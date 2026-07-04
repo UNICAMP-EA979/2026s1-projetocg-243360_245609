@@ -30,7 +30,7 @@ void main()
     vec3 worldNormalNormalized = normalize(worldNormal);
 
     // Calcule a direção de visualização (saindo do ponto)
-    vec3 viewDirection = -normalize(worldPosition);
+    vec3 viewDirection = normalize(-worldPosition);
 
     // Calcule a uv com tiling
     vec2 uvTiling = uv * tiling;
@@ -38,14 +38,12 @@ void main()
     // Realize sampling das texturas para obter as propriedades da superfície
     vec3 baseColor = texture(baseColorTexture, uvTiling).rgb;
     float metallic = texture(metallicTexture, uvTiling).r;
-    float roughness = texture(roughnessTexture, uvTiling).r;
+    float roughness = max(texture(roughnessTexture, uvTiling).r, 0.05); // Clamp leve para evitar divisão por zero
 
     vec3 color = vec3(0);
 
     // Calcule a luz ambiente
-    vec3 ambientLightContribution = baseColor * ambientColor * (1 - metallic) / PI;
-
-    color += ambientLightContribution;
+    vec3 ambientLightContribution = baseColor * ambientColor * (1.0 - metallic);
 
     for(int i = 0; i < MAX_LIGHT; i++)
     {
@@ -56,27 +54,22 @@ void main()
         }
 
         //Calcule dados da luz (atenuação, cor, direção)
-        float attenuation = computeLightAttenuation(light, worldPosition);
-        vec3 lightColor = light.intensity * light.color * attenuation;
-        vec3 lightDirection = computeLightDirection(light, worldPosition);
+        float attenuation = (light.type == 2) ? pow(light.reference_distance / max(distance(light.position, worldPosition), light.reference_distance), 2.0) : 1.0;
+        vec3 lightColor = light.color * light.intensity * attenuation;
+        vec3 lightDirection = (light.type == 1) ? normalize(-light.direction) : normalize(light.position - worldPosition);
 
         //Calcule o half-angle
         vec3 halfAngle = normalize(lightDirection + viewDirection);
 
         //Calcule as refletância de fresnel, difusa e especular
         vec3 fresnel = fresnelReflectance(baseColor, metallic, halfAngle, lightDirection);
-        vec3 diffuse = diffuseReflectance(fresnel, baseColor, metallic);
+        vec3 diffuse = (1.0 - fresnel) * (baseColor / PI) * (1.0 - metallic);
         vec3 specular = specularReflectance(fresnel, worldNormalNormalized, halfAngle, viewDirection, lightDirection, roughness);
 
-        //Calcule a refletância final
         vec3 reflectance = diffuse + specular;
-
-        //Calcule a contribuição da luz e acumule na color
-        float lightnormal = max(dot(worldNormalNormalized, lightDirection), 0.0);
-        vec3 lightContribution = reflectance * lightColor * lightnormal;
-
+        vec3 lightContribution = reflectance * lightColor * max(dot(worldNormalNormalized, lightDirection), 0.0);
         color += lightContribution;
     }
 
-    FragColor = vec4(color, 1.0) * PI;
+    FragColor = vec4(ambientLightContribution + color, 1.0);
 }
