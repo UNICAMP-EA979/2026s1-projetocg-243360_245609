@@ -57,7 +57,7 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Descrição`
+`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 4 planetas e 2 asteroides. Os 2 asteroides estarão à direita dos planetas`
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
