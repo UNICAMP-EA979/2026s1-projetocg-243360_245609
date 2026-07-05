@@ -57,7 +57,7 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Descrição`
+`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois um é feito de rocha e outro de tijolos. O asteroide triangular é feito de tijolos e o cúbico é feito de rocha. `
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
