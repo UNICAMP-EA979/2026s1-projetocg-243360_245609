@@ -27,7 +27,7 @@ uniform Light lights[MAX_LIGHT];
 void main()
 {
     // Calcule a normal do fragmento
-    vec3 worldNormalNormalized = normalize(worldNormal);
+    vec3 worldNormalNormalized = normalize(gl_FrontFacing ? worldNormal : -worldNormal);
 
     // Calcule a direção de visualização (saindo do ponto)
     vec3 viewDirection = normalize(-worldPosition);
