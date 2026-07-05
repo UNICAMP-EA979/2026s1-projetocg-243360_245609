@@ -57,7 +57,7 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois um é feito de rocha e outro de tijolos. O asteroide triangular é feito de tijolos e o cúbico é feito de rocha. `
+`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois um é feito de rocha e outro de tijolos. O asteroide triangular é feito de tijolos e o cúbico é feito de rocha. Os assets usados são cores e texturas de tijolos, metal e rocha. O asset de tijolo consiste na seguinte cor :![assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Color.jpg] e na seguinte textura: ![assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Roughness.jpg]. O de metal consiste na seguinte cor: ![assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Color.jpg], na seguinte característica metálica: ![assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Metalness.jpg] e na seguinte textura: ![assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Roughness.jpg]. O de rocha consiste na seguinte cor: ![assets/Rock035_1K-JPG/Rock035_1K-JPG_Color.jpg] e na seguinte textura: ![assets/Rock035_1K-JPG/Rock035_1K-JPG_Roughness.jpg]`.
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
@@ -65,4 +65,6 @@ Descreva a cena que implementaram:
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
 
-- `Nome do Asset`: `Licensa` (`Link`)
+- `Bricks104_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks104`)
+- `Metal048A_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks104`)
+- `Rock035_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks104`)
