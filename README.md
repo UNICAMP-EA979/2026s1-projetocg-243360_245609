@@ -57,12 +57,14 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois um é feito de rocha e outro de tijolos. O asteroide triangular é feito de tijolos e o cúbico é feito de rocha. `
+`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois um é feito de rocha e outro de tijolos. O asteroide triangular é feito de tijolos e o cúbico é feito de rocha. Todos orbitam ao redor do planeta principal. Os asteroides orbitam circularmente em torno do eixo z e os planetas em torno do eixo y. O planeta principal se move para frente e para trás (translação no eixo z). Os assets usados são cores e texturas de tijolos, metal e rocha. O asset de tijolo consiste na seguinte cor :![Bricks104 Color](assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Color.jpg) e na seguinte textura: ![Bricks104 Roughness](assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Roughness.jpg). O de metal consiste na seguinte cor: ![Metal048 Color](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Color.jpg), na seguinte característica metálica: ![Metal048 Metalness](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Metalness.jpg) e na seguinte textura: ![Metal048 Roughness](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Roughness.jpg). O de rocha consiste na seguinte cor: ![Rock035 Color](assets/Rock035_1K-JPG/Rock035_1K-JPG_Color.jpg) e na seguinte textura: ![Rock035 Roughness](assets/Rock035_1K-JPG/Rock035_1K-JPG_Roughness.jpg)`. 
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
 ## Assets utilizados
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
-
-- `Nome do Asset`: `Licensa` (`Link`)
+`(Os mesmos que usamos na CG03)`
+- `Bricks104_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks`) 
+- `Metal048A_1K-JPG`: `CC0` (`https://polyhaven.com/a/metal`)
+- `Rock035_1K-JPG`: `CC0` (`https://polyhaven.com/a/rock`)
