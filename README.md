@@ -64,7 +64,7 @@ Descreva a cena que implementaram:
 ## Assets utilizados
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
-
-- `Bricks104_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks`)
+`(Os mesmos que usamos na CG03)`
+- `Bricks104_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks`) 
 - `Metal048A_1K-JPG`: `CC0` (`https://polyhaven.com/a/metal`)
 - `Rock035_1K-JPG`: `CC0` (`https://polyhaven.com/a/rock`)
