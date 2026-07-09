@@ -83,12 +83,17 @@ if __name__ == "__main__":
     brickRoughness = Texture.load_file(
         "assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Roughness.jpg",
         drop_alpha=True)
+    #textura para o universo
+    skyboxTexture = Texture.load_file(
+        "assets/Blue-universe-956981.jpg",
+        srgb=True, drop_alpha=True)
  
     # ── Materiais ─────────────────────────────────────────────────────────────
     matMetal = Material(shader)
     matMetal.set_texture(0, "baseColorTexture", metalBaseColor)
     matMetal.set_texture(1, "metallicTexture",  metalMetallic)
     matMetal.set_texture(2, "roughnessTexture", metalRoughness)
+    matMetal.set_texture(3, "skyboxTexture",    skyboxTexture)
  
     roughMetallic = Texture(180 * np.ones((1,1), np.uint8), GL.GL_RED, GL.GL_R8)
     matRoughMetal = matMetal.clone()
