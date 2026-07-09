@@ -2,7 +2,7 @@ from collections import deque
  
 import numpy as np
 import sys
-#sys.path.insert(0, r"C:\Users\rafae\2026-cg03-pbr-243360_245609\src")
+sys.path.insert(0, r"C:\Users\rafae\2026-cg03-pbr-243360_245609\src")
 import urenderer
 from OpenGL import GL
 from urenderer.node import Node
@@ -159,7 +159,7 @@ if __name__ == "__main__":
         s.callbacks = [update_orbit]
         runtime.scene.add_child(s)
 
-    # ── Asteroide cúbico (metal) ───────────────────────────────────────────────
+    # ── Asteroide cúbico (rocha) ───────────────────────────────────────────────
     asteroid_cube = urenderer.node.Node()
     asteroid_cube.translation = np.array([
         orbit_center[0] + 3.2,
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     asteroid_cube.callbacks = [update_orbit_tilted]
     runtime.scene.add_child(asteroid_cube)
 
-    # ── Asteroide triangular (rocha) ───────────────────────────────────────────
+    # ── Asteroide triangular (tijolo) ───────────────────────────────────────────
     asteroid_tri = urenderer.node.Node()
     asteroid_tri.translation = np.array([
         orbit_center[0] + 3.8 * np.cos(np.pi),
