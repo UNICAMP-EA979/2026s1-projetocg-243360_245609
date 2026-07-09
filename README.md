@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24207996&assignment_repo_type=AssignmentRepo)
 # Projeto de CG - Cena
 
 Vamos utilizar o renderizador implementado nas tarefas anteriores para renderizar uma cena.
@@ -56,12 +57,15 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Descrição`
+`Fizemos um sistema planetário com planetas e asteroides, com asteroides triangulares e cúbicos. Terá 3 planetas e 2 asteroides. Os 2 asteroides e 2 planetas orbitaram o planeta principal. O planeta principal é metálico, e os outros dois são feitos de tijolos. O asteroide triangular é feito de tijolo e o cúbico é feito de rocha. Todos orbitam ao redor do planeta principal. Os asteroides orbitam circularmente em torno do eixo z e os planetas em torno do eixo y. O planeta principal se move para frente e para trás (translação no eixo z). Os assets usados são cores e texturas de tijolos, metal e rocha. O asset de tijolo consiste na seguinte cor :![Bricks104 Color](assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Color.jpg) e na seguinte textura: ![Bricks104 Roughness](assets/Bricks104_1K-JPG/Bricks104_1K-JPG_Roughness.jpg). O de metal consiste na seguinte cor: ![Metal048 Color](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Color.jpg), na seguinte característica metálica: ![Metal048 Metalness](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Metalness.jpg) e na seguinte textura: ![Metal048 Roughness](assets/Metal048A_1K-JPG/Metal048A_1K-JPG_Roughness.jpg). O de rocha consiste na seguinte cor: ![Rock035 Color](assets/Rock035_1K-JPG/Rock035_1K-JPG_Color.jpg) e na seguinte textura: ![Rock035 Roughness](assets/Rock035_1K-JPG/Rock035_1K-JPG_Roughness.jpg)Além disso, implementamos o item opcional de melhorias na renderização, adicionando Image-Based Lighting (IBL) através de Mapeamento de Reflexão Equiretangular. Alteramos a matemática do Fragment Shader para calcular vetores de reflexão física a partir da câmera e da normal da superfície, combinando-os com a Aproximação de Schlick para a Equação de Fresnel. Isso nos permitiu criar um efeito de espelhamento avançado, fazendo com que o planeta principal metálico atue como um espelho e reflita a imagem panorâmica 360° de uma galáxia.`
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
 ## Assets utilizados
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
-
-- `Nome do Asset`: `Licensa` (`Link`)
+`(Os mesmos que usamos na CG03)`
+- `Bricks104_1K-JPG`: `CC0` (`https://polyhaven.com/a/bricks`) 
+- `Metal048A_1K-JPG`: `CC0` (`https://polyhaven.com/a/metal`)
+- `Rock035_1K-JPG`: `CC0` (`https://polyhaven.com/a/rock`)
+- `Blue-universe-956981.jpg`: `Pexels License — Felix Mittermeier` (`https://www.pexels.com/photo/blue-universe-956981/`)
